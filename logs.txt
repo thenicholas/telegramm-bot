@@ -1,2 +1,0 @@
-{"update_id":391598095,
-"message":{"message_id":8,"from":{"id":763252357,"is_bot":false,"first_name":"\u041d\u0438\u043a\u043e\u043b\u0430\u0439","last_name":"\u0424\u0435\u0434\u043e\u0440\u043e\u0432","username":"fedorov_nikolay","language_code":"ru"},"chat":{"id":763252357,"first_name":"\u041d\u0438\u043a\u043e\u043b\u0430\u0439","last_name":"\u0424\u0435\u0434\u043e\u0440\u043e\u0432","username":"fedorov_nikolay","type":"private"},"date":1567104562,"text":"123"}}
