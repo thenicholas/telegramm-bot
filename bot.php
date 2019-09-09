@@ -1,8 +1,10 @@
 <?php
 
+require_once('./token.php');
+//чтение и декодирование данных из POST запроса
 $output = json_decode(file_get_contents('php://input'), true);
+
 $id = $output['message']['chat']['id'];
-$token = '934474930:AAECA_C5ZgHjTAQwz_3zrTJxIx6ZiNuOmcg';
 $message = $output['message']['text'];
 $photo = 'https://dev.aka-root.com/psycho-bot/image.jpg';
 $caption = 'Что вы видите на картинке?';
@@ -24,7 +26,7 @@ switch ($message) {
         sendMessage($token, $id, $message);
         sendPhoto($token, $id, $photo);
         break;
-    case strpos($message, 'клякс') !== false;
+    case stripos($message, 'клякс') !== false;
         $message = "А вы молодец.";
         sendMessage($token, $id, $message);
         break;

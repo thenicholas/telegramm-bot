@@ -1,0 +1,6 @@
+CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, telegram_user_id bigint, first_name VARCHAR(100), last_name VARCHAR(100), username VARCHAR(100), chat_id bigint, state TINYINT, date datetime NOT NULL DEFAULT NOW(), PRIMARY KEY (id));
+CREATE TABLE questions (id INT NOT NULL AUTO_INCREMENT, question VARCHAR(200), author INT, apruved BOOLEAN, PRIMARY KEY (id));
+CREATE TABLE answers (id INT NOT NULL AUTO_INCREMENT, answer VARCHAR(200), question_id INT, author INT, apruved BOOLEAN, PRIMARY KEY (id));
+CREATE TABLE questions_journal (id INT NOT NULL AUTO_INCREMENT, user_id INT, question_id INT, answer_id INT, date datetime NOT NULL DEFAULT NOW(), PRIMARY KEY (id));
+CREATE TABLE permissoins (id INT NOT NULL AUTO_INCREMENT, user_id INT, grant_to_username VARCHAR(100), date datetime NOT NULL DEFAULT NOW(), PRIMARY KEY (id));
+CREATE TABLE accescode (id INT NOT NULL AUTO_INCREMENT, user_id1 INT, user_id2 INT, code VARCHAR(10), date datetime NOT NULL DEFAULT NOW(), PRIMARY KEY (id), UNIQUE (code));
